@@ -1,0 +1,366 @@
+
+*, *:before, *:after {
+    box-sizing: inheret;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    margin: 0;
+
+}
+
+.wrapper {
+    display: grid;
+    width: 100%;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 2fr 0.8fr 2fr 2fr 0.8fr;
+    grid-template-areas:
+        "header"
+        "menu"
+        "banner"
+        "main"
+        "footer"
+        
+}
+
+.header {
+    grid-area: header;
+    background-image: url(images/violin.jpeg);
+    background-color: #cccccc; /* Used if the image is unavailable */
+  height: auto; /* You must set a specified height */
+ background-position: center;  /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+.header a {
+    text-decoration: none;
+}
+
+#title {
+    color: white;
+    margin: 20px;
+    font-size: 2em;
+    text-shadow: 5 5px 20px 10px black;
+}
+
+
+.menu {
+    background: rgba(0, 0, 0, 0.87);
+    grid-area: menu;
+    height:auto;
+    
+}
+
+.menu-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 30px;
+}
+
+.menu-item a {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: 500; 
+}
+
+.menu-item a:hover {
+   
+    background-color:#f3b116c7;
+    
+}
+
+/* banner - violin sale */
+.banner {
+    background: rgb(236, 234, 234);
+    grid-area: banner;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+}
+
+.banner img {
+    opacity: 1; 
+    width: 100%;
+    height: 300px;
+    background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  object-fit: cover; /* Resize the background image to cover the entire container */
+    transition: .5s ease;
+    backface-visibility: hidden;
+    
+  }
+  
+  .middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .banner:hover .image {
+    opacity: 0.5;
+  }
+  
+  .banner:hover .middle {
+    opacity: 1;
+  }
+  
+  .text {
+    background-color: #f3b116;
+    font-weight: 900;
+    color: white;
+    font-size: 20px;
+    padding: 16px 32px;
+    text-transform: uppercase;
+  }
+
+  .middle a {
+      text-decoration: none;
+  }
+
+/* instrument page */
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+}
+
+.violin {
+    display: grid;
+    grid-template: 1fr 3fr 1fr / 1fr 2fr;
+    background: white;
+    margin: 10px;
+    border: 2px solid silver;
+    border-radius: 10px;
+    width: 100%;
+    height: 250px;
+    box-shadow: 0 10px 20px 10px rgba(black, 0.45);
+}
+
+.violin img {
+    grid-row: 1/-1;
+    object-fit: cover;
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+}
+
+.violin h3 {
+    margin: 20px;
+}
+
+.violin p {
+    margin: 20px;
+}
+
+.price {
+    font-size: 2em;
+    text-align: right;
+}
+
+/* sale page */
+.sale {
+    margin: 20px;
+}
+
+.quote-container {
+    position: relative;
+    text-align: center;
+
+}
+
+.center {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-5%, -80%);
+  }
+
+#quote {
+    margin: 20px;
+    padding: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+    transform: rotate(355deg);
+    color: black;
+    background-color:#f3b116;
+    opacity: 0.7;
+}
+
+
+/*about page */
+
+.about {
+    width: 100%;
+    height: 100%;
+    background-color: #f5d07828;
+    font-size: 1.2em;
+}
+
+.about p {
+    margin: 20px;
+}
+
+.luthier {
+    display: flex;
+    margin: 20px;
+}
+
+.luthier img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/*contact page */
+.contact {
+    background:#e6d09f63;
+    margin: 10px;
+    padding: 20px;
+    border: 3px solid silver;
+    border-radius: 10px;
+    display: flex;
+    flex-direction:column;
+}
+
+.contact input, textarea{
+    margin: 10px;
+    border-radius: 5px;
+    
+}
+
+.contact input {
+    width: 75%;
+    text-align: right;
+}
+
+#submit {
+    width: auto;
+    border: 3px solid silver;
+    background:rgb(44, 41, 41);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+} 
+
+.video {
+    margin: 20px;
+}
+
+/*main section */
+.main {
+    grid-area: main;
+    background-color: #f5d07828;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main p, h2 {
+    margin: 30px;
+}
+
+#welcome {
+    text-align: right;
+}
+
+/*footer section */
+.footer {
+    background: rgba(0, 0, 0, 0.87);
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.footer h3 {
+    color: white;
+    font-size: 0.9em;
+    margin: 5px;
+}
+
+/*media queries */
+@media (min-width: 800px) {
+    .wrapper {
+        display: grid;
+        width: 100%;
+        display: grid;
+        height: 100vh;
+        grid-template-rows: 1fr 2fr 2fr 0.8fr;
+        grid-template-columns: 250px 3fr;
+        grid-template-areas:
+            "header     header"
+            "menu       banner"
+            "menu       main"
+            "footer     main"
+            
+    }
+    
+    .menu {
+        display: flex;
+        max-width: 250px;
+    }
+    
+    .menu-list {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        justify-content: space-around;
+        align-items: center;
+        min-height: 30px;
+        flex-grow: 0;
+    }
+      
+    .container {
+    
+        width: 90%;
+        justify-content: center;
+    }
+    
+    .violin {
+        display: grid;
+        grid-template: 1fr 3fr 1fr / 1fr 2fr;
+        background: white;
+        margin: 10px;
+        border: 2px solid silver;
+        border-radius: 10px;
+        width: 40%;
+        height: 400px;
+        box-shadow: 0 10px 20px 10px rgba(black, 0.45);
+    }
+
+form {
+    display: flex;
+}
+
+    .footer {
+        flex-grow: 0;
+        max-width: 250px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+     
+}
