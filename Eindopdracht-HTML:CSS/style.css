@@ -1,13 +1,14 @@
 
 *, *:before, *:after {
     box-sizing: inheret;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: 'Quicksand', sans-serif;
     font-size: 1em;
     margin: 0;
-
 }
 
 .wrapper {
@@ -21,18 +22,17 @@ body {
         "menu"
         "banner"
         "main"
-        "footer"
-        
+        "footer"     
 }
 
 .header {
     grid-area: header;
     background-image: url(images/violin.jpeg);
     background-color: #cccccc; /* Used if the image is unavailable */
-  height: auto; /* You must set a specified height */
- background-position: center;  /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+    height: auto; /* You must set a specified height */
+    background-position: center;  /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
 }
 
 .header a {
@@ -45,7 +45,6 @@ body {
     font-size: 2em;
     text-shadow: 5 5px 20px 10px black;
 }
-
 
 .menu {
     background: rgba(0, 0, 0, 0.87);
@@ -73,9 +72,7 @@ body {
 }
 
 .menu-item a:hover {
-   
     background-color:#f3b116c7;
-    
 }
 
 /* banner - violin sale */
@@ -96,11 +93,10 @@ body {
     width: 100%;
     height: 300px;
     background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  object-fit: cover; /* Resize the background image to cover the entire container */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    object-fit: cover; /* Resize the background image to cover the entire container */
     transition: .5s ease;
     backface-visibility: hidden;
-    
   }
   
   .middle {
@@ -132,7 +128,7 @@ body {
   }
 
   .middle a {
-      text-decoration: none;
+    text-decoration: none;
   }
 
 /* instrument page */
@@ -185,7 +181,6 @@ body {
 .quote-container {
     position: relative;
     text-align: center;
-
 }
 
 .center {
@@ -206,9 +201,7 @@ body {
     opacity: 0.7;
 }
 
-
 /*about page */
-
 .about {
     width: 100%;
     height: 100%;
@@ -244,8 +237,7 @@ body {
 
 .contact input, textarea{
     margin: 10px;
-    border-radius: 5px;
-    
+    border-radius: 5px;  
 }
 
 .contact input {
@@ -313,8 +305,7 @@ body {
             "header     header"
             "menu       banner"
             "menu       main"
-            "footer     main"
-            
+            "footer     main"   
     }
     
     .menu {
@@ -333,7 +324,6 @@ body {
     }
       
     .container {
-    
         width: 90%;
         justify-content: center;
     }
@@ -350,17 +340,13 @@ body {
         box-shadow: 0 10px 20px 10px rgba(black, 0.45);
     }
 
-form {
-    display: flex;
-}
+    form {
+        display: flex;
+    }
 
     .footer {
         flex-grow: 0;
         max-width: 250px;
     }
-
 }
 
-@media (min-width: 1024px) {
-     
-}
